@@ -38,4 +38,22 @@ export const shader = class {
 		}
 	}
 	// constructor
+
+	init(gl, err_callback) {
+		const vxshader = LoadShader(gl, gl.VERTEX_SHADER, this.vertexsh);
+		const fgshader = LoadShader(gl, gl.FRAGMENT_SHADER, this.fragsh);
+
+		const program = gl.createProgram();
+		gl.attachShader(program, vxshader);
+		gl.attachShader(program, fgshader);
+		gl.linkProgram(program);
+
+		if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+			err_callback(gl.getProgramInfoLog(program));
+			return null;
+		}
+
+		this.program = program;
+		return program;
+	}
 }
