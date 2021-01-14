@@ -6,7 +6,7 @@
 // global WebGL context
 export var webgl_ctx;
 
-let init = (canvas, err_callback) => {
+export var init = (canvas, err_callback) => {
     webgl_ctx = null;
 
     // try to initialize WebGL
