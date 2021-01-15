@@ -24,4 +24,10 @@ export const scene = class {
 		webgl_ctx.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
 	}
 	// constructor
+
+	set_camera(direction_vec) {
+		mat4.translate(this.model_view_matrix,
+		               this.model_view_matrix,
+			       direction_vec);
+	}
 }
