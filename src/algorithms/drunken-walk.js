@@ -7,8 +7,7 @@
 // . means floor
 // S means stairs
 export const maze = (width, height, iterations) => {
-    let maze      = [[]];
-    let positions = [[]];
+    let maze = [[]];
     for (let i = 0; i < height-1; i++) {
         maze.push([]);
         maze[i].forEach(element => {
