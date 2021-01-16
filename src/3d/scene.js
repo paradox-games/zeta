@@ -1,11 +1,11 @@
 // ZETA ENGINE:
 // 3d scenes module with
-// scene class
+// Scene3d class
 
 import { webgl_ctx } from './webgl'
 
 // scene class
-export const scene = class {
+export const Scene3d = class {
 	constructor(color=[0.0, 0.0, 0.0, 1.0], shader, clear=1.0, depth_func=webgl_ctx.LEQUAL, field_of_view, near, far, depth_test=false) {
 		this.shader = shader;
 		this.field_of_view = field_of_view;

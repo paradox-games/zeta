@@ -1,6 +1,6 @@
 // ZETA ENGINE:
 // 2d scenes module
-// with scene2d class
+// with Scene2d class
 
 export const Scene2d = class {
     constructor(canvas) {
