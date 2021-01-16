@@ -30,6 +30,12 @@ export const Obj2d = class {
             this.ctx.fill();
             this.ctx.closePath();
             break;
+        case 'image':
+            this.ctx.drawImage(this.color, this.x, this.y); //here color is an image
+            break;
+        default:
+            console.log('Zeta engine, Obj2d draw function: ' + this.imgtype + ' is not a valid type')
+            break;
         }
     }
 }
