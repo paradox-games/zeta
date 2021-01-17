@@ -3,7 +3,7 @@
 // language main module
 
 export const DrawScript = (script) => {
-    let splitted = script.split(' ');
+    let splitted = script.replace('\n', ' ').split(' ');
     let canvas = null;
     let ctx = null;
     let flags = {
