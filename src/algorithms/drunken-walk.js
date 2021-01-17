@@ -10,17 +10,13 @@ export const maze = (width, height, iterations) => {
     let maze = [[]];
     for (let i = 0; i < height-1; i++) {
         maze.push([]);
-        maze[i].forEach(element => {
-            for (let j = 0; j < width; j++) {
-                maze[i].push(' ');
-            }
-        });
+        for (let j = 0; j < width; j++) {
+            maze[i].push(' ');
+        }
     }
 
     let playerX = Math.floor(Math.random() * Math.pow(10, width.toString().length)) % width;
     let playerY = Math.floor(Math.random() * Math.pow(10, height.toString().length)) % height;
-
-    positions[0].push(playerX, playerY);
 
     let maze_write = (enemy, stairs) => {
         if (maze[playerY][playerX] == 'X')
