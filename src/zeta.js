@@ -7,3 +7,5 @@ export { canvas }    from './canvas'
 
 export * as z3d from './3d/3d'
 export * as z2d from './2d/2d'
+
+export * from './algorithms/drunken-walk'
